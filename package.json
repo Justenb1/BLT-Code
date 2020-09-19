@@ -1,17 +1,46 @@
 {
-  "name": "contract",
+  "name": "starter-kit",
   "version": "1.0.0",
-  "description": "",
-  "main": "truffle-config.js",
+  "description": "Truffle box containing React, OpenZeppelin SDK",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:contracts": "openzeppelin compile",
+    "docs": "oz-docs -c docs",
+    "docs:watch": "npm run docs watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenZeppelin/starter-kit"
+  },
+  "keywords": [
+    "zeppelinos",
+    "openzeppelin",
+    "openzeppelin-sdk",
+    "solidity",
+    "smart-contracts",
+    "ethereum",
+    "truffle",
+    "react"
+  ],
+  "author": "Ramon Recuero <ramon@dapis.io>, Igor Yalovoy <igor@openzeppelin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenZeppelin/starter-kit/issues"
+  },
+  "homepage": "https://github.com/OpenZeppelin/starter-kit#readme",
   "dependencies": {
-    "cli-interact": "^0.1.9",
-    "openzeppelin-solidity": "2.3.0",
-    "sync-request": "^6.0.0"
+    "@openzeppelin/contracts-ethereum-package": "^2.4.0",
+    "@openzeppelin/upgrades": "^2.6.0",
+    "@truffle/hdwallet-provider": "^1.0.23",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/cli": "^2.6.0",
+    "chai": "^4.2.0",
+    "concurrently": "^5.0.0",
+    "http-server": "^0.11.1",
+    "nodemon": "^2.0.1",
+    "openzeppelin-docs-utils": "github:OpenZeppelin/docs-utils",
+    "openzeppelin-test-helpers": "^0.5.1"
   }
 }
